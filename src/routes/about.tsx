@@ -40,7 +40,7 @@ function About() {
           </h1>
           <p className="mt-6 max-w-3xl text-lg text-muted-foreground">
             Paradigm Peptides LLC was established in 2014 with a clear mission: supply researchers with the
-            best-quality compounds they need for their studies. A decade later, we're still doing exactly that —
+            best-quality compounds they need for their studies. A decade later, we're still doing exactly that
             actively shipping, fully operational, and committed to the same standards we started with.
           </p>
         </div>
@@ -56,7 +56,7 @@ function About() {
                 <h2 className="font-display text-xl font-bold">Still here. Still shipping.</h2>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Paradigm Peptides LLC is active, operational, and under current ownership. Orders ship within
-                  24 hours from our U.S. facility — no exceptions, no hidden "release" fees, no third-party
+                  24 hours from our U.S. facility no exceptions, no hidden "release" fees, no third-party
                   payment middlemen.
                 </p>
               </div>
@@ -76,7 +76,7 @@ function About() {
               Over the past decade, Paradigm Peptides has built a reputation for delivering products that meet
               the highest standards of authenticity and purity. We collaborate exclusively with well-established
               U.S.-based direct manufacturers, which lets us offer a diverse range of compounds in both liquid
-              and tablet forms — without compromising on what's inside the vial.
+              and tablet forms without compromising on what's inside the vial.
             </p>
             <p>
               Our team shares a deep passion for the science behind Peptides, SARMs, and Nootropics. We're
@@ -100,7 +100,7 @@ function About() {
               {
                 icon: Lock,
                 t: "Secure ordering",
-                d: "Advanced SSL encryption and PCI-compliant storage protect your data. We accept Visa, Mastercard, American Express, and Discover — processed directly, never through third parties.",
+                d: "Advanced SSL encryption and PCI-compliant storage protect your data. We accept Visa, Mastercard, American Express, and Discover processed directly, never through third parties.",
               },
               {
                 icon: Heart,
@@ -110,7 +110,7 @@ function About() {
               {
                 icon: Handshake,
                 t: "Trust & partnership",
-                d: "Paradigm Peptides is more than a supplier — we're your partner in research. We aim to empower the research community with the tools they need to succeed.",
+                d: "Paradigm Peptides is more than a supplier we're your partner in research. We aim to empower the research community with the tools they need to succeed.",
               },
             ].map((p) => (
               <div key={p.t} className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/40">
@@ -130,7 +130,7 @@ function About() {
           <h2 className="font-display mt-2 text-2xl font-bold md:text-3xl">Real company. Real address. Real people.</h2>
           <p className="mt-3 text-sm text-muted-foreground max-w-2xl">
             We list our information publicly because we want you to verify it. Paradigm Peptides LLC is a
-            distinct entity — we are <span className="text-foreground font-medium">not</span> affiliated with
+            distinct entity we are <span className="text-foreground font-medium">not</span> affiliated with
             Paradigm R.E. LLC of Michigan City, Indiana, or any related party operating under a similar name.
           </p>
           <div className="mt-6 grid gap-5 sm:grid-cols-3">
