@@ -192,14 +192,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Disclaimer banner */}
-      <section className="border-y border-border bg-muted/40">
-        <div className="container mx-auto px-4 py-6 text-center text-xs leading-relaxed text-muted-foreground">
-          All products sold by Paradigm Peptides are strictly for research and laboratory use only.
-          They are not intended for human or animal consumption, medical use, or therapeutic
-          application. These statements have not been evaluated by the FDA.
-        </div>
-      </section>
     </div>
   );
 }
