@@ -200,7 +200,7 @@ function ProductPage() {
           <div className="font-mono text-xs uppercase tracking-widest text-primary">Research Notes</div>
           <h2 className="font-display mt-2 text-2xl font-bold">About {p.name}</h2>
           <div className="prose prose-invert mt-4 max-w-3xl text-muted-foreground">
-            {p.description.split(/\.\s+/).slice(0, 8).map((s, i) => (
+            {p.description.split(/\.\s+/).slice(0, 8).map((s: string, i: number) => (
               <p key={i} className="mb-3 leading-relaxed">{s.trim()}.</p>
             ))}
           </div>
