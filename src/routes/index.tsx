@@ -57,12 +57,12 @@ function Home() {
               <BadgeCheck className="h-3 w-3" /> Trusted since 2014 · ≥98% Purity
             </div>
             <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] md:text-6xl">
-              Paradigm Peptides —{" "}
+              Paradigm Peptides{" "}
               <span className="text-gradient-cyan">Research-Grade Compounds</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
               Trusted by researchers since 2014. Pharmaceutical-grade Peptides, SARMs, Nootropics,
-              and Lab Supplies — independently tested, ≥98% purity guaranteed.
+              and Lab Supplies independently tested, ≥98% purity guaranteed.
             </p>
             <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
               Every paradigm peptide and compound in our catalog ships with documented purity so
@@ -168,7 +168,7 @@ function Home() {
             {
               icon: Microscope,
               title: "Quality You Can Verify",
-              body: "Every compound we sell is independently tested and ships with a Certificate of Analysis. Our products meet or exceed 98% purity — because your research depends on it.",
+              body: "Every compound we sell is independently tested and ships with a Certificate of Analysis. Our products meet or exceed 98% purity because your research depends on it.",
             },
             {
               icon: ShieldCheck,
