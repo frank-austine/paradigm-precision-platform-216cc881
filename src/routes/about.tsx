@@ -158,25 +158,6 @@ function About() {
           </div>
         </section>
 
-        {/* Transparency / scam warning */}
-        <section className="mt-12 rounded-xl border border-destructive/40 bg-destructive/5 p-6 md:p-8">
-          <div className="flex items-start gap-4">
-            <AlertCircle className="mt-1 h-6 w-6 flex-shrink-0 text-destructive" />
-            <div>
-              <h2 className="font-display text-xl font-bold">A note on payment scams</h2>
-              <p className="mt-2 text-sm text-muted-foreground">
-                We will <span className="text-foreground font-medium">never</span> ask you to pay a "financial
-                release fee," send Bitcoin to a third party, or route payment through any company other than the
-                card processors listed at checkout. If you receive an email claiming to be from us asking for
-                anything like this — it isn't us. Report it to{" "}
-                <a href="mailto:support@paradigmpeptides.com" className="text-primary hover:underline">
-                  support@paradigmpeptides.com
-                </a>{" "}
-                and we'll help you sort it out.
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* Lab results CTA */}
         <section className="mt-12 flex flex-col items-start gap-4 rounded-xl border border-border bg-surface p-6 md:flex-row md:items-center md:justify-between md:p-8">
