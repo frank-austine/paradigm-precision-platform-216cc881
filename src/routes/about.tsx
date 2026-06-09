@@ -189,9 +189,6 @@ function About() {
           </div>
         </section>
 
-        <div className="mt-12">
-          <ResearchNotice />
-        </div>
       </div>
     </div>
   );
