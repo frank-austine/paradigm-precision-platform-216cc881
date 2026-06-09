@@ -3,7 +3,6 @@ import { useState } from "react";
 import { z } from "zod";
 import { useCart } from "@/lib/cart";
 import { formatPrice, SITE } from "@/lib/site";
-import { ResearchNotice } from "@/components/ResearchNotice";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { CreditCard, Smartphone, CheckCircle2 } from "lucide-react";
@@ -176,7 +175,6 @@ function Checkout() {
           <button disabled={submitting} className="mt-6 w-full rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground ring-cyan-glow hover:opacity-90 disabled:opacity-60">
             {submitting ? "Placing order…" : "Place order"}
           </button>
-          <div className="mt-4"><ResearchNotice /></div>
         </aside>
       </form>
     </div>

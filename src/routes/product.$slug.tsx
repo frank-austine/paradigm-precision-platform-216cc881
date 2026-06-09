@@ -2,7 +2,6 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { fetchProductBySlug } from "@/lib/db";
-import { ResearchNotice } from "@/components/ResearchNotice";
 import { useCart } from "@/lib/cart";
 import { formatPrice, SITE } from "@/lib/site";
 import { FlaskConical, Minus, Plus, ShoppingCart, ShieldCheck, Truck, Atom } from "lucide-react";
@@ -191,7 +190,6 @@ function ProductPage() {
             </div>
           </div>
 
-          <div className="mt-6"><ResearchNotice /></div>
         </div>
       </div>
 
