@@ -1,8 +1,9 @@
 import { Link } from "@tanstack/react-router";
-import { ShoppingCart, FlaskConical, Menu, X } from "lucide-react";
+import { ShoppingCart, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "@/lib/cart";
 import { SITE } from "@/lib/site";
+import pplogo from "@/assets/pplogo.png.asset.json";
 
 export function Header() {
   const { count } = useCart();
