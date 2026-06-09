@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { RESEARCH_NOTICE } from "@/lib/site";
+
 
 const KEY = "pp_age_gate_v1";
 
