@@ -8,10 +8,7 @@ export function Footer() {
       <div className="container mx-auto grid gap-10 px-4 py-14 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary/15 ring-1 ring-primary/40">
-              <FlaskConical className="h-5 w-5 text-primary" />
-            </div>
-            <div className="font-display text-lg font-bold">Paradigm Peptides LLC</div>
+            <img src={pplogo.url} alt="Paradigm Peptides" className="h-12 w-auto" />
           </div>
           <p className="mt-3 text-sm text-muted-foreground">{SITE.tagline}</p>
           <p className="mt-4 text-xs text-muted-foreground">{RESEARCH_NOTICE}</p>
