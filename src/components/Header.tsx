@@ -1,8 +1,9 @@
 import { Link } from "@tanstack/react-router";
-import { ShoppingCart, FlaskConical, Menu, X } from "lucide-react";
+import { ShoppingCart, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "@/lib/cart";
 import { SITE } from "@/lib/site";
+import pplogo from "@/assets/pplogo.png.asset.json";
 
 export function Header() {
   const { count } = useCart();
@@ -23,16 +24,8 @@ export function Header() {
         Free Shipping on Orders Over ${SITE.freeShippingThreshold} · All Products For Research Use Only
       </div>
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary/15 ring-1 ring-primary/40">
-            <FlaskConical className="h-5 w-5 text-primary" />
-          </div>
-          <div className="leading-tight">
-            <div className="font-display text-lg font-bold tracking-tight">Paradigm</div>
-            <div className="-mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-              Peptides LLC
-            </div>
-          </div>
+        <Link to="/" className="flex items-center">
+          <img src={pplogo.url} alt="Paradigm Peptides" className="h-12 w-auto" />
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
