@@ -2,7 +2,6 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { fetchProducts } from "@/lib/db";
 import { ProductCard } from "@/components/ProductCard";
-import { ResearchNotice } from "@/components/ResearchNotice";
 import { SITE } from "@/lib/site";
 
 export const Route = createFileRoute("/category/$slug")({
@@ -47,7 +46,6 @@ function CategoryPage() {
           {products.map((p) => <ProductCard key={p.id} product={p} />)}
         </div>
       )}
-      <div className="mt-12"><ResearchNotice /></div>
     </div>
   );
 }

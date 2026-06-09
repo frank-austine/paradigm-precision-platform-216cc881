@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { SITE, RESEARCH_NOTICE } from "@/lib/site";
+import { SITE } from "@/lib/site";
 const pplogo = { url: "/__l5e/assets-v1/33bbc803-209f-4a98-8415-97eb3b253e32/pplogo.png" };
 
 export function Footer() {
@@ -11,7 +11,6 @@ export function Footer() {
             <img src={pplogo.url} alt="Paradigm Peptides" className="h-12 w-auto" />
           </div>
           <p className="mt-3 text-sm text-muted-foreground">{SITE.tagline}</p>
-          <p className="mt-4 text-xs text-muted-foreground">{RESEARCH_NOTICE}</p>
         </div>
 
         <div>

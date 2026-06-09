@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ResearchNotice } from "@/components/ResearchNotice";
 import { Button } from "@/components/ui/button";
 import {
   ShieldCheck,

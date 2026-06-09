@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { RESEARCH_NOTICE } from "@/lib/site";
+
 
 const KEY = "pp_age_gate_v1";
 
@@ -36,7 +36,7 @@ export function AgeGate() {
           <strong className="text-foreground">laboratory and research purposes only</strong> — not
           for human or animal consumption.
         </p>
-        <p className="mt-3 text-xs text-muted-foreground">{RESEARCH_NOTICE}</p>
+        
         <div className="mt-6 flex gap-3">
           <Button onClick={accept} className="flex-1 font-semibold">
             I Confirm & Accept

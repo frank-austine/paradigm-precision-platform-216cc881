@@ -3,7 +3,6 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { fetchProducts } from "@/lib/db";
 import { ProductCard } from "@/components/ProductCard";
-import { ResearchNotice } from "@/components/ResearchNotice";
 import { SITE } from "@/lib/site";
 
 export const Route = createFileRoute("/shop")({
@@ -81,7 +80,6 @@ function Shop() {
       )}
 
       <div className="mt-12">
-        <ResearchNotice />
       </div>
     </div>
   );

@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useCart } from "@/lib/cart";
 import { formatPrice, SITE } from "@/lib/site";
 import { Trash2, Minus, Plus, ShoppingBag } from "lucide-react";
-import { ResearchNotice } from "@/components/ResearchNotice";
 
 export const Route = createFileRoute("/cart")({
   head: () => ({ meta: [{ title: "Cart — Paradigm Peptides LLC" }, { name: "description", content: "Review your research compounds before checkout." }] }),
@@ -73,7 +72,6 @@ function CartPage() {
           <Link to="/shop" className="mt-3 block text-center text-xs text-muted-foreground hover:text-primary">Continue shopping</Link>
         </aside>
       </div>
-      <div className="mt-12"><ResearchNotice /></div>
     </div>
   );
 }
