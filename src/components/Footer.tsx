@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { FlaskConical } from "lucide-react";
 import { SITE, RESEARCH_NOTICE } from "@/lib/site";
+import pplogo from "@/assets/pplogo.png.asset.json";
 
 export function Footer() {
   return (
