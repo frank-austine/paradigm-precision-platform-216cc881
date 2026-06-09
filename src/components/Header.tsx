@@ -3,7 +3,7 @@ import { ShoppingCart, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "@/lib/cart";
 import { SITE } from "@/lib/site";
-import pplogo from "@/assets/pplogo.png.asset.json";
+const pplogo = { url: "/__l5e/assets-v1/33bbc803-209f-4a98-8415-97eb3b253e32/pplogo.png" };
 
 export function Header() {
   const { count } = useCart();
