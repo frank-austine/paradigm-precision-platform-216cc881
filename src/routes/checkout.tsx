@@ -21,7 +21,7 @@ const schema = z.object({
   state: z.string().trim().min(1).max(60),
   zip: z.string().trim().min(3).max(20),
   country: z.string().trim().min(2).max(60),
-  payment_method: z.enum(["card", "venmo", "cashapp"]),
+  payment_method: z.enum(["card", "venmo", "cashapp", "chime", "crypto", "zelle", "paypal"]),
   notes: z.string().trim().max(1000).optional().or(z.literal("")),
 });
 
