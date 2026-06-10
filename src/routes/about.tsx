@@ -144,7 +144,7 @@ function About() {
               <Mail className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
               <div>
                 <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Contact</div>
-                <div className="mt-1 text-sm font-medium">support@paradigmpeptides.com</div>
+                <div className="mt-1 text-sm font-medium">paradigmpeptidellc@gmail.com</div>
               </div>
             </div>
             <div className="flex items-start gap-3">

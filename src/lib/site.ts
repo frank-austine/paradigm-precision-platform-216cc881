@@ -2,7 +2,7 @@ export const SITE = {
   name: "Paradigm Peptides LLC",
   tagline: "Research-grade compounds. Tested. Trusted.",
   freeShippingThreshold: 150,
-  contactEmail: "support@paradigmpeptides.com",
+  contactEmail: "paradigmpeptidellc@gmail.com",
   contactHours: "Available 24/7",
   categories: [
     { slug: "peptides", label: "Peptides", db: "Peptides" },
