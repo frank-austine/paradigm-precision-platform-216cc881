@@ -129,11 +129,15 @@ function Checkout() {
           </Section>
 
           <Section title="Payment method">
-            <div className="grid gap-3 md:grid-cols-3">
+            <div className="grid gap-3 md:grid-cols-4">
               {[
                 { v: "card", label: "Card", icon: CreditCard },
                 { v: "venmo", label: "Venmo", icon: Smartphone },
                 { v: "cashapp", label: "Cash App", icon: Smartphone },
+                { v: "chime", label: "Chime", icon: Banknote },
+                { v: "crypto", label: "Crypto", icon: Bitcoin },
+                { v: "zelle", label: "Zelle", icon: Banknote },
+                { v: "paypal", label: "PayPal", icon: Wallet },
               ].map((opt) => (
                 <button
                   type="button"
@@ -148,7 +152,15 @@ function Checkout() {
             <p className="mt-3 text-xs text-muted-foreground">
               {method === "card"
                 ? "Card processing will be confirmed by email after order placement."
-                : `After placing your order, you'll receive ${method === "venmo" ? "Venmo" : "Cash App"} payment instructions.`}
+                : `After placing your order, you'll receive ${
+                    method === "venmo" ? "Venmo" :
+                    method === "cashapp" ? "Cash App" :
+                    method === "chime" ? "Chime" :
+                    method === "crypto" ? "crypto wallet" :
+                    method === "zelle" ? "Zelle" :
+                    method === "paypal" ? "PayPal" :
+                    method
+                  } payment instructions.`}
             </p>
           </Section>
 
