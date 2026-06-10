@@ -30,7 +30,7 @@ function Checkout() {
   const { items, subtotal, clear } = useCart();
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState<{ id: string; method: string } | null>(null);
-  const [method, setMethod] = useState<"card" | "venmo" | "cashapp">("card");
+  const [method, setMethod] = useState<"card" | "venmo" | "cashapp" | "chime" | "crypto" | "zelle" | "paypal">("card");
 
   const shipping = subtotal >= SITE.freeShippingThreshold || subtotal === 0 ? 0 : 15;
   const total = subtotal + shipping;
