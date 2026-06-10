@@ -21,7 +21,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="border-b border-border/40 bg-primary py-2 text-center text-xs font-mono uppercase tracking-widest text-primary-foreground">
-        Free Shipping on Orders Over ${SITE.freeShippingThreshold} · All Products For Research Use Only
+        Free Shipping on Orders Over ${SITE.freeShippingThreshold} · All Product 10% off if you are paying with crypto
       </div>
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <Link to="/" className="flex items-center">
