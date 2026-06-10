@@ -48,7 +48,15 @@ function Checkout() {
             <div className="font-mono text-xs uppercase tracking-widest text-primary">Payment instructions</div>
             <p className="mt-2 text-sm">
               Send <strong className="text-primary">{formatPrice(total)}</strong> via{" "}
-              <strong>{done.method === "venmo" ? "Venmo" : "Cash App"}</strong> and include order #
+              <strong>
+                {done.method === "venmo" ? "Venmo" :
+                 done.method === "cashapp" ? "Cash App" :
+                 done.method === "chime" ? "Chime" :
+                 done.method === "crypto" ? "crypto" :
+                 done.method === "zelle" ? "Zelle" :
+                 done.method === "paypal" ? "PayPal" :
+                 done.method}
+              </strong> and include order #
               <strong>{done.id.slice(0, 8).toUpperCase()}</strong> in the note. We will contact you
               at the email provided once payment is confirmed.
             </p>
