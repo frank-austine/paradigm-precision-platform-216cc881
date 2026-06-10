@@ -5,7 +5,7 @@ import { useCart } from "@/lib/cart";
 import { formatPrice, SITE } from "@/lib/site";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import { CreditCard, Smartphone, CheckCircle2 } from "lucide-react";
+import { CreditCard, Smartphone, Wallet, Bitcoin, Banknote, CheckCircle2 } from "lucide-react";
 
 export const Route = createFileRoute("/checkout")({
   head: () => ({ meta: [{ title: "Checkout — Paradigm Peptides LLC" }, { name: "description", content: "Complete your research compound order." }] }),
@@ -21,7 +21,7 @@ const schema = z.object({
   state: z.string().trim().min(1).max(60),
   zip: z.string().trim().min(3).max(20),
   country: z.string().trim().min(2).max(60),
-  payment_method: z.enum(["card", "venmo", "cashapp"]),
+  payment_method: z.enum(["card", "venmo", "cashapp", "chime", "crypto", "zelle", "paypal"]),
   notes: z.string().trim().max(1000).optional().or(z.literal("")),
 });
 
@@ -30,7 +30,7 @@ function Checkout() {
   const { items, subtotal, clear } = useCart();
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState<{ id: string; method: string } | null>(null);
-  const [method, setMethod] = useState<"card" | "venmo" | "cashapp">("card");
+  const [method, setMethod] = useState<"card" | "venmo" | "cashapp" | "chime" | "crypto" | "zelle" | "paypal">("card");
 
   const shipping = subtotal >= SITE.freeShippingThreshold || subtotal === 0 ? 0 : 15;
   const total = subtotal + shipping;
@@ -48,7 +48,15 @@ function Checkout() {
             <div className="font-mono text-xs uppercase tracking-widest text-primary">Payment instructions</div>
             <p className="mt-2 text-sm">
               Send <strong className="text-primary">{formatPrice(total)}</strong> via{" "}
-              <strong>{done.method === "venmo" ? "Venmo" : "Cash App"}</strong> and include order #
+              <strong>
+                {done.method === "venmo" ? "Venmo" :
+                 done.method === "cashapp" ? "Cash App" :
+                 done.method === "chime" ? "Chime" :
+                 done.method === "crypto" ? "crypto" :
+                 done.method === "zelle" ? "Zelle" :
+                 done.method === "paypal" ? "PayPal" :
+                 done.method}
+              </strong> and include order #
               <strong>{done.id.slice(0, 8).toUpperCase()}</strong> in the note. We will contact you
               at the email provided once payment is confirmed.
             </p>
@@ -129,11 +137,15 @@ function Checkout() {
           </Section>
 
           <Section title="Payment method">
-            <div className="grid gap-3 md:grid-cols-3">
+            <div className="grid gap-3 md:grid-cols-4">
               {[
                 { v: "card", label: "Card", icon: CreditCard },
                 { v: "venmo", label: "Venmo", icon: Smartphone },
                 { v: "cashapp", label: "Cash App", icon: Smartphone },
+                { v: "chime", label: "Chime", icon: Banknote },
+                { v: "crypto", label: "Crypto", icon: Bitcoin },
+                { v: "zelle", label: "Zelle", icon: Banknote },
+                { v: "paypal", label: "PayPal", icon: Wallet },
               ].map((opt) => (
                 <button
                   type="button"
@@ -148,7 +160,15 @@ function Checkout() {
             <p className="mt-3 text-xs text-muted-foreground">
               {method === "card"
                 ? "Card processing will be confirmed by email after order placement."
-                : `After placing your order, you'll receive ${method === "venmo" ? "Venmo" : "Cash App"} payment instructions.`}
+                : `After placing your order, you'll receive ${
+                    method === "venmo" ? "Venmo" :
+                    method === "cashapp" ? "Cash App" :
+                    method === "chime" ? "Chime" :
+                    method === "crypto" ? "crypto wallet" :
+                    method === "zelle" ? "Zelle" :
+                    method === "paypal" ? "PayPal" :
+                    method
+                  } payment instructions.`}
             </p>
           </Section>
 
