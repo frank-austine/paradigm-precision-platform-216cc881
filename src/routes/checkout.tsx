@@ -5,7 +5,7 @@ import { useCart } from "@/lib/cart";
 import { formatPrice, SITE } from "@/lib/site";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import { CreditCard, Smartphone, CheckCircle2 } from "lucide-react";
+import { CreditCard, Smartphone, Wallet, Bitcoin, Banknote, CheckCircle2 } from "lucide-react";
 
 export const Route = createFileRoute("/checkout")({
   head: () => ({ meta: [{ title: "Checkout — Paradigm Peptides LLC" }, { name: "description", content: "Complete your research compound order." }] }),
