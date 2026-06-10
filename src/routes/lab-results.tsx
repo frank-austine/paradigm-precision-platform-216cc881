@@ -46,7 +46,6 @@ function Lab() {
               <th className="px-4 py-3">Batch</th>
               <th className="px-4 py-3">Purity</th>
               <th className="px-4 py-3">Tested</th>
-              <th className="px-4 py-3"></th>
             </tr>
           </thead>
           <tbody>
@@ -56,9 +55,6 @@ function Lab() {
                 <td className="px-4 py-3 font-mono text-xs">{s.batch}</td>
                 <td className="px-4 py-3 text-primary">{s.purity}</td>
                 <td className="px-4 py-3 text-muted-foreground">{s.date}</td>
-                <td className="px-4 py-3 text-right">
-                  <a href="mailto:support@paradigmpeptides.com?subject=COA%20Request" className="text-primary hover:underline">Request COA →</a>
-                </td>
               </tr>
             ))}
           </tbody>
